@@ -1,0 +1,61 @@
+#main {
+  position: relative;
+  height: 100vh;
+
+  max-width: 1440px;
+  margin: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  & .advice {
+    background-color: $color-dark-grayish-blue;
+    position: relative;
+    width: 52rem;
+    border-radius: 15px;
+    padding: 3rem;
+    box-shadow: -1rem 1rem 5rem -3rem #000;
+
+    transform: scale(0);
+    transition: transform 1.5s ease;
+
+    @media only screen and (max-width: $bp-small) {
+      width: 35rem;
+      padding: 1.6rem;
+    }
+
+    &__number {
+      color: $color-neon-green;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 1.6rem;
+      font-weight: 800;
+    }
+
+    &__quote {
+      text-align: center;
+    }
+
+    &__pattern--divider {
+      width: 100%;
+    }
+
+    &__dice {
+      display: inline-block;
+      padding: 1.267rem 2rem;
+      background-color: $color-neon-green;
+      border-radius: 50%;
+
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translate(-50%, 50%);
+
+      &:hover {
+        box-shadow: 0 0 20px $color-neon-green;
+      }
+    }
+  }
+}
