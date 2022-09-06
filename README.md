@@ -24,8 +24,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [solution URL]()
-- Live Site URL: [live site URL]()
+- Solution URL: [solution URL](https://github.com/Nedu21/advice-generator)
+- Live Site URL: [live site URL](https://advice-generator-nedu.netlify.app/)
 
 ### Built with
 
