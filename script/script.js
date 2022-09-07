@@ -11,14 +11,14 @@ const shuffle = async function () {
   try {
     const response = await fetch("https://api.adviceslip.com/advice");
 
-    console.log(response);
     if (!response.ok)
       throw new Error(`Failed to fetch data error ${response.status} 😌`);
 
     const data = await response.json();
-    console.log(data);
     adviceNumber.textContent = `# ${data.slip.id}`;
     advice.textContent = data.slip.advice;
+
+    console.log(data.slip.id, data.slip.advice);
   } catch (err) {
     adviceNumber.textContent = "";
     advice.textContent = err;
