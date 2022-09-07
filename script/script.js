@@ -17,8 +17,6 @@ const shuffle = async function () {
     const data = await response.json();
     adviceNumber.textContent = `# ${data.slip.id}`;
     advice.textContent = data.slip.advice;
-
-    console.log(data.slip.id, data.slip.advice);
   } catch (err) {
     adviceNumber.textContent = "";
     advice.textContent = err;
@@ -31,7 +29,7 @@ window.addEventListener("load", function () {
   setTimeout(() => {
     spinner.classList.add("hidden");
     adviceContainer.classList.add("visible");
-  }, 2500);
+  }, 3000);
 });
 
 dice.addEventListener("click", shuffle);
