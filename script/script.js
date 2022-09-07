@@ -16,6 +16,7 @@ const shuffle = async function () {
       throw new Error(`Failed to fetch data error ${response.status} 😌`);
 
     const data = await response.json();
+    console.log(data);
     adviceNumber.textContent = `# ${data.slip.id}`;
     advice.textContent = data.slip.advice;
   } catch (err) {
